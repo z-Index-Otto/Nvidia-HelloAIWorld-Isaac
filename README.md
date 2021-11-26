@@ -1,1 +1,1 @@
-# Nvidia-HelloAIWorld-Isaac
+# Nvidia's HelloAIWorld integration with Isaac
