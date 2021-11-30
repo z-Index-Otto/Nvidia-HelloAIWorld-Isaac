@@ -1,6 +1,7 @@
 {
   "name": "argus_camera",
   "modules": [
+    "//apps/tutorials/opencv_edge_detection:edge_detector",
     "sensors:argus_camera",
     "sight",
     "viewers"
@@ -59,6 +60,19 @@
         ]
       },
       {
+        "name": "edge_detector",
+        "components": [
+          {
+            "name": "MessageLedger",
+            "type": "isaac::alice::MessageLedger"
+          },
+          {
+            "name": "EdgeDetector",
+            "type": "isaac::opencv::EdgeDetector"
+          }
+        ]
+      },
+      {
         "name": "color_camera_viewer",
         "components": [
           {
@@ -75,6 +89,10 @@
     "edges": [
       {
         "source": "argus/camera/image",
+        "target": "edge_detector/EdgeDetector/input_image"
+      },
+      {
+        "source": "edge_detector/EdgeDetector/output_image",
         "target": "color_camera_viewer/viewer/image"
       }
     ]
