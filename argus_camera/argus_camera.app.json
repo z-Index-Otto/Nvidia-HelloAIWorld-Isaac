@@ -11,7 +11,7 @@
         "port": 3000,
         "ui_config": {
           "windows": {
-            "Argus Image": {
+            "Hello AI World!": {
               "renderer": "2d",
               "dims": {
                 "width": 1280,
