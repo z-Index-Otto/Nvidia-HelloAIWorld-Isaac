@@ -25,5 +25,18 @@ As we use a Rapberry Pi camera connected on the Jetson board (CSI), we'll use th
 
 ## Step 2
 Make the [Building Isaac Applications](https://docs.nvidia.com/isaac/isaac/doc/tutorials/building_apps.html) sample working.
-Check the (argus_camera/argus_camera.app.json) and the (argus_camera/BUILD) adapted according to our case
+Check the [argus_camera.app.json](https://github.com/z-Index-Otto/Nvidia-HelloAIWorld-Isaac/blob/main/argus_camera/argus_camera.app.json) and the [BUILD](https://github.com/z-Index-Otto/Nvidia-HelloAIWorld-Isaac/blob/main/argus_camera/BUILD) files adapted according to our case
 
+### Build the project
+
+``` bash
+~/isaac/sdk$ bazel build //apps/Nvidia-HelloAIWorld-Isaac/argus_camera
+```
+
+### Deploy on the Jetson
+
+``` bash
+~/isaac/sdk$ ./apps/Nvidia-HelloAIWorld-Isaac/argus_camera/deploy.sh
+```
+
+> The `deploy.sh` file must be set as executable: `chmod u+x deploy.sh`
